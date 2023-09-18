@@ -14,10 +14,8 @@ OBJS    = sample.o sample_test.o
 
 INCLUDES += $(GTEST_INCLUDES) -Isrc
 
-# (7)ライブラリファイルのあるディレクトリパス
 LIBDIR  += $(GTEST_LIBDIR)
 
-# (8)追加するライブラリファイル
 LIBS    = -lgtest -lgtest_main
 
 $(TARGET): $(OBJS)
@@ -29,4 +27,4 @@ $(OBJS): $(SRCS)
 all: clean $(OBJS) $(TARGET)
 
 clean:
-	-rm -f $(OBJS) $(TARGET) *.d
+	@rm -f $(OBJS) $(TARGET)
