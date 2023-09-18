@@ -6,13 +6,13 @@ GTEST_LIBDIR = -L$(mkfile_path)external/googletest/build/lib
 CC  = g++
 CFLAGS    = -std=c++11
 
-TARGET  = test_all.a
+TARGET  = test_all
 
-SRCS    = sample.cc sample_test.cc
+SRCS    = src/*.cc test/*.cc
 
 OBJS    = sample.o sample_test.o
 
-INCLUDES += $(GTEST_INCLUDES)
+INCLUDES += $(GTEST_INCLUDES) -Isrc
 
 # (7)ライブラリファイルのあるディレクトリパス
 LIBDIR  += $(GTEST_LIBDIR)
