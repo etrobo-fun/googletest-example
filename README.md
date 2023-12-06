@@ -1,4 +1,4 @@
-# googletest-tutorial
+# googletest-example
 
 ## Required
 
